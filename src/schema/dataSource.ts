@@ -7,7 +7,7 @@ const { db } = Config;
 
 const AppDataSource = new DataSource({
     type: "postgres",
-    host: "localhost",
+    host: db.host,
     username: db.user,
     password: db.password,
     database: db.database,

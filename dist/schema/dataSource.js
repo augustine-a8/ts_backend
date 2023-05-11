@@ -4,7 +4,7 @@ import { UserEntity, ProfileEntity } from "./entities";
 const { db } = Config;
 const AppDataSource = new DataSource({
     type: "postgres",
-    host: "localhost",
+    url: db.url ? db.url : "",
     username: db.user,
     password: db.password,
     database: db.database,
